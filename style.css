@@ -1,0 +1,394 @@
+/* style.css */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.first-page {
+  background-image: url("background-for-pc-01.png");
+  background-size: cover; /* Ensures the entire image is visible */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar design*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed; /* Position it over the background */
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  margin: 0; /* Remove any default margin */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply the blur effect */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Add a light border for separation */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent black */
+}
+
+.navbar .logo img {
+  height: 80px; /* Adjust the logo size */
+}
+
+.navbar nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+.navbar .nav-links li {
+  margin-left: 30px;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-family: "Bitter", sans-serif;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.hamburger {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  margin: 0; /* Ensure no extra space */
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 5px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+/*Navbar design ends here*/
+
+/* Hero Section Styling */
+
+/* text design */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh; /* Full viewport height */
+  position: relative;
+  padding-left: 100px;
+  color: #000000; /* Black text color */
+  box-sizing: border-box; /* Ensure padding does not cause overflow */
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 10;
+}
+
+.hero-content h1 {
+  font-family: "Russo One", sans-serif; /* Match the font used */
+  font-size: 96px; /* Adjust font size */
+  line-height: 1.1;
+  margin: 0;
+  color: #000000; /* Black text color */
+}
+
+.hero-content p {
+  font-family: "Bitter", serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-top: 80px;
+  color: #000000; /* Black text color */
+}
+/* text design ends here */
+
+/* artists page */
+
+/* Content wrapper below the hero section */
+.content-wrapper {
+  padding: 2rem;
+  background-color: #000; /* Separate background color for the content-wrapper */
+  color: white;
+  text-align: center;
+  margin-top: 0; /* Ensure proper spacing from the hero section */
+}
+
+.hero-section + .content-wrapper {
+  margin-top: 0; /* Ensure no collapsing margins */
+}
+
+.content-wrapper h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #222;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card p {
+  margin-top: 1rem;
+  font-family: "Bitter", serif;
+  font-size: 1rem;
+}
+
+/* artists page ends here */
+
+/* contact page */
+
+.third-page {
+  background-image: url("last-page-for-pc-01.png");
+  background-size: cover; /* Ensures the entire image is visible */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contact Us Section */
+.contact-us {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+    position: relative;
+    top: 200px;
+    left: 50px;
+}
+
+.contact-us h2 {
+    font-family: 'Bitter', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-us input,
+.contact-us textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.contact-us button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-us button:hover {
+    background-color: #0056b3;
+}
+/* contact page ends here */
+
+/* Footer Styling */
+.footer {
+    background-color: #FFCCCC;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.social-icons {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    color: black;
+    text-decoration: none;
+    font-size: 2rem; /* Adjust size as needed */
+    margin: 0 0.5rem;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #555;
+}
+
+.footer p {
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+
+
+/* Adjustments for mobile devices */
+@media only screen and (max-width: 768px) {
+  .first-page {
+    background-image: url("mobile-background-01.png");
+    background-size: cover; /* Ensures the entire image is visible */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar nav {
+    display: none; /* Hide the nav links on mobile */
+  }
+
+  .hamburger {
+    display: flex; /* Show the hamburger menu */
+  }
+
+  .navbar.active nav {
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.5
+    ); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Add a light border for separation */
+  }
+
+  .navbar.active .nav-links {
+    flex-direction: column;
+  }
+
+  .navbar.active .nav-links li {
+    margin: 15px 0;
+  }
+
+  .hero-section {
+    padding-left: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 56px; /* Smaller font size for mobile */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Adjust text size */
+  }
+
+  .content-wrapper h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    max-width: 400px;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+  .third-page {
+    background-image: url("mobile-background-01.png");
+    background-size: cover; /* Ensures the entire image is visible */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-us {
+    max-width: 300px;
+    left: 30px;
+}
+.social-icons {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem; /* Adjust size for smaller screens */
+    margin: 0 0.25rem;
+}
+
+.footer p {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+  
+}
+
+@media only screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 48px; /* Even smaller font size for small screens */
+  }
+
+  .hero-content p {
+    font-size: 14px; /* Adjust text size for small screens */
+  }
+
+  .content-wrapper h2 {
+    font-size: 20px;
+  }
+
+  .card {
+    max-width: 400px;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
